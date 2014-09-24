@@ -9,7 +9,6 @@ INDEX VERSION 1.126+/home/morninng/MySource/transcription/Sphinx4Git_Again/sphin
 2771403403.index
 2982035129.index
 120211678.index
-1393792149.index
 3214207201.index
 3721837726.index
 46282419.index
