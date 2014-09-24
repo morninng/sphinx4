@@ -3,6 +3,7 @@ INDEX VERSION 1.126+/home/morninng/MySource/transcription/Sphinx4Git_Again/sphin
 3885805113.index
 2233963263.index
 1913109094.index
+3519552660.index
 2066489604.index
 2630498905.index
 742522455.index
@@ -12,5 +13,6 @@ INDEX VERSION 1.126+/home/morninng/MySource/transcription/Sphinx4Git_Again/sphin
 3214207201.index
 3721837726.index
 46282419.index
+2316645442.index
 1932949083.index
 3888198363.index
