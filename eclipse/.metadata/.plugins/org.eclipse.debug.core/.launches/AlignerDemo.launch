@@ -7,5 +7,6 @@
 <listEntry value="1"/>
 </listAttribute>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="edu.cmu.sphinx.demo.aligner.AlignerDemo"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="http://webdemo.dac.co.jp/zedo/test/test.wav"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="Speech Recognition"/>
 </launchConfiguration>

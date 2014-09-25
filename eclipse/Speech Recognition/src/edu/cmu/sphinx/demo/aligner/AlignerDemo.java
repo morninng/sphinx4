@@ -12,6 +12,9 @@
 package edu.cmu.sphinx.demo.aligner;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -44,9 +47,10 @@ public class AlignerDemo {
     private static final String TEXT = "one zero zero zero one nine oh two "
             + "one oh zero one eight zero three";
 
-    public static void main(String args[]) throws Exception {
+    public static void main(String args[]) {
         URL audioUrl;
         String transcript;
+        try{
         if (args.length > 1) {
             audioUrl = new File(args[0]).toURI().toURL();
             Scanner scanner = new Scanner(new File(args[1]));  
@@ -55,6 +59,18 @@ public class AlignerDemo {
             scanner.close();
         } else {
             audioUrl = AlignerDemo.class.getResource("10001-90210-01803.wav");
+            if(audioUrl ==null){
+            	audioUrl = new URL("http://webdemo.dac.co.jp/zedo/test/10001-90210-01803.wav");
+            	if(audioUrl == null){
+            		System.out.println("test wav cannot be found");
+            		return;
+            	}else{
+            		System.out.println("audio file is on the web");
+            	}
+            }else{
+            	System.out.println("audio file is local file");
+            }
+            
             transcript = TEXT;
         }
         String acousticModelPath =
@@ -101,6 +117,16 @@ public class AlignerDemo {
                 System.out.format("+ %-25s [%s]\n", result.getWord()
                         .getSpelling(), result.getTimeFrame());
             }
-        }
+        } 
+        	
+        }catch (MalformedURLException e){
+        	e.printStackTrace();
+        }catch (IOException e ){
+            	e.printStackTrace();
+                	
+        }catch (Exception e ){
+        	e.printStackTrace();
     }
 }
+}		
+		
